@@ -1,27 +1,12 @@
-draw_set_color(c_black);
-var _str = string(_cur_charge)+"/"+string(_max_charge);
-draw_text(x-(string_width(_str)/2),y-50,_str);
-
-if (_charging == true){
-	draw_sprite(spr_flag_zone,1,x,y);
-} else if (_cur_charge >= 100){
-	draw_sprite(spr_flag_zone,2,x,y);		
-}
-else {
-	draw_sprite(spr_flag_zone,0,x,y);
-}
-
-
-
 //==============================
-// TEAM OUTLINE (building sprite)
+// TEAM OUTLINE (unit sprite)
 //==============================
-var _col = (_team == BUILDING_TEAM.PLAYER) ? c_blue : c_red;
+var _col = (_team == UNIT_TEAM.PLAYER) ? c_blue : c_red;
 
 // Enable shader
 shader_set(shd_team_outline);
 
-// Uniforms (cache in Create if you want)
+// Get uniforms (cache in Create for performance if desired)
 var u_col   = shader_get_uniform(shd_team_outline, "outline_color");
 var u_size  = shader_get_uniform(shd_team_outline, "outline_size");
 var u_texel = shader_get_uniform(shd_team_outline, "texel_size");
@@ -40,24 +25,25 @@ shader_set_uniform_f(
 );
 
 //--------------------------------
-// Outline thickness
+// Outline thickness (pixels)
 //--------------------------------
 shader_set_uniform_f(u_size, 1.0);
 
 //--------------------------------
 // Sprite UVs (atlas-safe)
 //--------------------------------
-var _uvs = sprite_get_uvs(spr_flag, 0);
+var _uvs = sprite_get_uvs(sprite_index, image_index);
 // uvs = [u0, v0, u1, v1]
 
+// Pass UV bounds
 shader_set_uniform_f(u_min, _uvs[0], _uvs[1]);
 shader_set_uniform_f(u_max, _uvs[2], _uvs[3]);
 
 //--------------------------------
 // Correct texel size (UV per pixel)
 //--------------------------------
-var sw = sprite_get_width(spr_flag);
-var sh = sprite_get_height(spr_flag);
+var sw = sprite_get_width(sprite_index);
+var sh = sprite_get_height(sprite_index);
 
 var uv_w = _uvs[2] - _uvs[0];
 var uv_h = _uvs[3] - _uvs[1];
@@ -69,13 +55,29 @@ shader_set_uniform_f(
 );
 
 //--------------------------------
-// Draw building WITH outline
+// Draw unit WITH outline
 //--------------------------------
-if (_cur_charge >= 100){
-	draw_sprite(spr_flag,1,x,y);
-} else {
-	draw_sprite(spr_flag,0,x,y);	
-}
+draw_self();
 
 // Disable shader
 shader_reset();
+
+
+//==============================
+// OVERLAYS (no shader)
+//==============================
+
+// Selection ring
+if (_selected) {
+    draw_sprite(spr_selected, 0, x, y);
+}
+
+// Move target marker
+if ((_tar_x != x) && (_tar_y != y)) {
+    draw_sprite(spr_target, 0, _tar_x, _tar_y);
+}
+
+// HP text
+draw_set_color(c_white);
+var _str = string(_cur_hp) + "/" + string(_max_hp);
+draw_text(x - (string_width(_str) / 2), y + 50, _str);

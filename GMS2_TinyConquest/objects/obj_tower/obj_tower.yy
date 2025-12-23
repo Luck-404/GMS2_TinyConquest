@@ -10,10 +10,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Building",
+    "path": "folders/Objects/Building.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_building",
+    "path": "objects/obj_building/obj_building.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -27,7 +30,9 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_team","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"BUILDING_TEAM.ENEMY","varType":0,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "spr_tower_zone",

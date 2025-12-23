@@ -3,7 +3,7 @@ if (mouse_check_button_pressed(mb_left)) {
 	var clicked_unit = instance_position(
 		mouse_x,
 		mouse_y,
-		obj_unit_slag_shambler
+		obj_unit_fodder
 	);
 
 	// If we clicked a unit

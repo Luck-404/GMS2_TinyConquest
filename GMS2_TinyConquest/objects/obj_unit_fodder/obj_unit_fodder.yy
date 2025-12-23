@@ -1,18 +1,22 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_shot",
+  "name": "obj_unit_fodder",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Objects/Projectiles.yy",
+    "name": "Units",
+    "path": "folders/Objects/Units.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_unit",
+    "path": "objects/obj_unit/obj_unit.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -26,11 +30,13 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"_team","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"UNIT_TEAM.PLAYER","varType":0,},
+  ],
   "solid": false,
   "spriteId": {
-    "name": "spr_shot",
-    "path": "sprites/spr_shot/spr_shot.yy",
+    "name": "spr_unit_slag_shambler",
+    "path": "sprites/spr_unit_slag_shambler/spr_unit_slag_shambler.yy",
   },
   "spriteMaskId": null,
   "visible": true,
