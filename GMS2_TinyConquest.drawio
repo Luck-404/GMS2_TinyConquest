@@ -1,0 +1,136 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.7">
+  <diagram name="Page-1" id="GXg639s8IWxQ7A-2pwNW">
+    <mxGraphModel dx="2520" dy="982" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Main Menu" vertex="1">
+          <mxGeometry height="80" width="80" x="210" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-2" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="400" as="sourcePoint" />
+            <mxPoint x="530" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Campaign/Story Mode" vertex="1">
+          <mxGeometry height="80" width="80" x="490" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-4" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="400" as="sourcePoint" />
+            <mxPoint x="530" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Roguelike Mode" vertex="1">
+          <mxGeometry height="80" width="80" x="490" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-6" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="500" as="sourcePoint" />
+            <mxPoint x="440" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Unlocks Shop" vertex="1">
+          <mxGeometry height="80" width="80" x="385" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-8" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="500" as="sourcePoint" />
+            <mxPoint x="440" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Achievements" vertex="1">
+          <mxGeometry height="80" width="80" x="290" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-10" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280" y="340" as="sourcePoint" />
+            <mxPoint x="340" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Settings" vertex="1">
+          <mxGeometry height="80" width="80" x="420" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Exit" vertex="1">
+          <mxGeometry height="80" width="80" x="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-14" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-1" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280" y="340" as="sourcePoint" />
+            <mxPoint x="320" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-15" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-5" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="420" as="sourcePoint" />
+            <mxPoint x="700" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-16" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Pregame" vertex="1">
+          <mxGeometry height="80" width="80" x="690" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-19" parent="1" style="shape=card;whiteSpace=wrap;html=1;" value="- Choose Difficulty&lt;div&gt;- Choose Faction&lt;/div&gt;&lt;div&gt;- Choose Starting Commander&lt;/div&gt;&lt;div&gt;- Roll traits, pick one&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="280" x="590" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-20" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-16" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="640" y="430" as="sourcePoint" />
+            <mxPoint x="690" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-21" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-16" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-22" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="800" y="430" as="sourcePoint" />
+            <mxPoint x="930" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-22" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Generation" vertex="1">
+          <mxGeometry height="80" width="80" x="890" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-23" edge="1" parent="1" source="QVeCjiO24QBGaL_jAbCs-22" style="endArrow=classic;html=1;rounded=0;" target="QVeCjiO24QBGaL_jAbCs-24" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1080" y="380" as="sourcePoint" />
+            <mxPoint x="1070" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-24" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Play" vertex="1">
+          <mxGeometry height="80" width="80" x="1070" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-25" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Commander" vertex="1">
+          <mxGeometry height="80" width="80" x="610" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-26" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Warrior" vertex="1">
+          <mxGeometry height="80" width="80" x="830" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-27" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Mage" vertex="1">
+          <mxGeometry height="80" width="80" x="1020" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-28" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Ranged" vertex="1">
+          <mxGeometry height="80" width="80" x="1080" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-29" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Cavalry" vertex="1">
+          <mxGeometry height="80" width="80" x="950" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-30" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Tank" vertex="1">
+          <mxGeometry height="80" width="80" x="680" y="1650" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-31" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Siege" vertex="1">
+          <mxGeometry height="80" width="80" x="345" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-32" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Support" vertex="1">
+          <mxGeometry height="80" width="80" x="120" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-34" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Engineer" vertex="1">
+          <mxGeometry height="80" width="80" x="40" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-35" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Paragon" vertex="1">
+          <mxGeometry height="80" width="80" x="60" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="QVeCjiO24QBGaL_jAbCs-36" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Summoned" vertex="1">
+          <mxGeometry height="80" width="80" x="280" y="750" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
