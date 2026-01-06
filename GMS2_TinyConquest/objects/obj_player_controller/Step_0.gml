@@ -1,72 +1,97 @@
+////////////////////////////////
+// OBJ_PLAYER_CONTROLLER STEP //
+////////////////////////////////
+
+//LEFT CLICK SELECTS
+#region SELECTION
 if (mouse_check_button_pressed(mb_left)) {
+    var clicked = noone;
+	//TRY SELECTING UNIT FIRST
+    clicked = instance_position(mouse_x, mouse_y, obj_unit);
+	//TRY BUILDING SECOND
+    if (clicked == noone) {
+        clicked = instance_position(mouse_x, mouse_y, obj_building);
+    }
 
-	var clicked_unit = instance_position(
-		mouse_x,
-		mouse_y,
-		obj_unit_fodder
-	);
+	//CLICK RESOLUTION
+    if (clicked != noone) {
 
-	// If we clicked a unit
-	if (clicked_unit != noone && clicked_unit._state != UNIT_STATE.DEAD) {
+        //CANT CLICK DEAD UNITS
+        if (object_is_ancestor(clicked.object_index, obj_unit) &&
+            clicked._state == UNIT_STATE.DEAD) 
+        {
+            clicked = noone;
+        }
+    }
 
-		// Unselect previous unit
-		if (_unit_selected != undefined && _unit_selected != noone) {
-			_unit_selected._selected = false;
-		}
+    //SELECTION STATE VARIABLE UPDATE LOGIC
+    if (clicked != noone) {
 
-		// Select new unit
-		_unit_selected = clicked_unit;
-		_unit_selected._selected = true;
+        //UNSELECT PREVIOUS
+        if (_entity_selected != undefined && _entity_selected != noone) {
+            _entity_selected._selected = false;
+        }
 
-	}
-	// Clicked empty space
+        //SELECT NEW 
+        _entity_selected = clicked;
+        _entity_selected._selected = true;
+
+    } 
+	
 	else {
 
-		if (_unit_selected != undefined && _unit_selected != noone) {
-			_unit_selected._selected = false;
-		}
+        //IF YOU CLICKED ON EMPTY- UNSELECT
+        if (_entity_selected != undefined && _entity_selected != noone) {
+            _entity_selected._selected = false;
+        }
 
-		_unit_selected = undefined;
+        _entity_selected = undefined;
+    }
+}
+#endregion
+
+#region UNIT CONTROL/COMMANDS
+if (_entity_selected != undefined && _entity_selected._type == "UNIT") {
+	if (_entity_selected._unit_name != "FODDER"){
+	    if (keyboard_check_pressed(vk_space)) {
+
+			//place target down if you aren't clicking on the wall tilemap
+			if (tilemap_get_at_pixel(global._wall_map,mouse_x,mouse_y) == 0){
+				_entity_selected._tar_x = mouse_x;
+				_entity_selected._tar_y = mouse_y;
+			}
+			
+	        _entity_selected._state = UNIT_STATE.MOVE;
+
+	        show_debug_message("[PLAYER] Move command issued to (" + string(_entity_selected._tar_x) + "," + string(_entity_selected._tar_y));
+	    }
 	}
 }
+#endregion
 
-if (_unit_selected != undefined){
-	if (keyboard_check_pressed(vk_space)) {
-		_unit_selected._tar_x = mouse_x;
-		_unit_selected._tar_y = mouse_y;
-		_unit_selected._state = UNIT_STATE.MOVE;
-	}
-}	
 
-//CAM
-if (keyboard_check(ord("W"))){
-		if (y-_cam_spd < 0){
-			
-		} else {
-			y-=_cam_spd;
-		}
-}
+// CAMERA MOVE
+#region CAMERA
+var cam = view_camera[0];
 
-if (keyboard_check(ord("A"))){
-		if (x-_cam_spd < 0){
-			
-		} else {
-			x-=_cam_spd;
-		}
-}
+// half view size
+var half_w = camera_get_view_width(cam) * 0.5;
+var half_h = camera_get_view_height(cam) * 0.5;
 
-if (keyboard_check(ord("S"))){
-		if (y+_cam_spd > 3840){
-			
-		} else {
-			y+=_cam_spd;
-		}
-}
+// desired movement
+var nx = x;
+var ny = y;
 
-if (keyboard_check(ord("D"))){
-		if (x+_cam_spd > 1920){
-			
-		} else {
-			x+=_cam_spd;
-		}
-}
+if (keyboard_check(ord("W"))) ny -= _cam_spd;
+if (keyboard_check(ord("S"))) ny += _cam_spd;
+if (keyboard_check(ord("A"))) nx -= _cam_spd;
+if (keyboard_check(ord("D"))) nx += _cam_spd;
+
+// clamp camera center to room bounds
+nx = clamp(nx, half_w, room_width - half_w);
+ny = clamp(ny, half_h, room_height - half_h);
+
+// apply
+x = nx;
+y = ny;
+#endregion

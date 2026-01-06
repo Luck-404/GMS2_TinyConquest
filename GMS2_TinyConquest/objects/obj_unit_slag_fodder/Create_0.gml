@@ -1,0 +1,7 @@
+//////////////////////////
+// OBJ_UNIT_SLAG_FODDER //
+//////////////////////////
+event_inherited();
+
+_cur_hp = 2;
+_max_hp = 2;

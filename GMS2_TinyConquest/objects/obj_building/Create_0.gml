@@ -1,7 +1,13 @@
-enum BUILDING_TEAM {
-	PLAYER,
-	ENEMY
-}
+/////////////////////////
+// OBJ_BUILDING CREATE //
+/////////////////////////
 
-_cur_hp = 100;
-_max_hp = 100;
+//HP INFO
+_cur_hp = 5;
+_max_hp = 5;
+_flag_destroyed = false;
+_flag_disabled = false;
+
+//SELECTION LOGIC
+_selected = false;
+_type = "BUILDING";
