@@ -3,8 +3,8 @@
 /////////////////////////
 
 //HP INFO
-_cur_hp = 5;
-_max_hp = 5;
+_cur_hp = 20;
+_max_hp = 20;
 _flag_destroyed = false;
 _flag_disabled = false;
 

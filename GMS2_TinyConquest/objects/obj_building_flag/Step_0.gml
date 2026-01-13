@@ -2,6 +2,8 @@
 // OBJ_FLAG STEP //
 ///////////////////
 
+
+if (global._flag_pause == false){
 //WHILE THERE IS STILL CHARGE LEFT TO BE HAD
 if (_flag_completed == false){
 	
@@ -35,4 +37,5 @@ if (_flag_completed == false){
 	else {
 		_charging = false;	
 	}
+}
 }

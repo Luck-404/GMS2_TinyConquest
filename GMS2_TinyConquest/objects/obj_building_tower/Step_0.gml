@@ -3,6 +3,7 @@
 ////////////////////////
 event_inherited();
 
+if (global._flag_pause == false){
 // Only act if tower is alive and enabled
 if (!_flag_destroyed && !_flag_disabled) {
 
@@ -62,4 +63,5 @@ if (!_flag_destroyed && !_flag_disabled) {
         _active = false;
         _shot_cooldown = max(_shot_cooldown - 1, 0);
     }
+}
 }

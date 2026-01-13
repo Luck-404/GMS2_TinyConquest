@@ -3,6 +3,7 @@
 /////////////////////////////
 event_inherited();
 
+if (global._flag_pause == false){
 if (_flag_disabled == false){
 	if (_spawn_cooldown > 0) {
 	    _spawn_cooldown--;
@@ -41,4 +42,5 @@ if (_flag_disabled == false){
 		_flag_destroyed = false;
 		_disabled_cooldown = 3600;
 	}
+}
 }

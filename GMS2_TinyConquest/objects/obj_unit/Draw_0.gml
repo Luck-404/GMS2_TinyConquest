@@ -38,6 +38,7 @@ shader_reset();
 //--------------------------
 // Draw the lane path
 //--------------------------
+if (global._flag_overlays == true){
 if (path_exists(_lane_path)) {
     var num_points = path_get_number(_lane_path);
     draw_set_alpha(0.5);
@@ -78,6 +79,7 @@ if (path_exists(_lane_path)) {
     
     draw_set_alpha(1);
 }
+}
 
 //--------------------------
 // Draw the unit itself
@@ -97,3 +99,9 @@ if (_selected) {
 draw_set_color(c_white);
 var _str = string(_cur_hp) + "/" + string(_max_hp);
 draw_text(x - (string_width(_str)/2), y + 50, _str);
+
+// Draw DEFEND ICON if attached
+if (_stance == UNIT_STANCE.DEFEND && variable_instance_exists(id, "_loc_defend_x")) {
+    draw_sprite(spr_defend_icon, 0, _loc_defend_x, _loc_defend_y - 24);
+}
+

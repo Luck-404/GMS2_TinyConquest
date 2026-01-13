@@ -51,23 +51,80 @@ if (mouse_check_button_pressed(mb_left)) {
 #endregion
 
 #region UNIT CONTROL/COMMANDS
-if (_entity_selected != undefined && _entity_selected._type == "UNIT") {
-	if (_entity_selected._unit_name != "FODDER"){
-	    if (keyboard_check_pressed(vk_space)) {
+if (_entity_selected != undefined && _entity_selected._type == "UNIT" && _entity_selected._unit_name != "FODDER") {
+    if (keyboard_check_pressed(vk_space)) {
 
-			//place target down if you aren't clicking on the wall tilemap
-			if (tilemap_get_at_pixel(global._wall_map,mouse_x,mouse_y) == 0){
-				_entity_selected._tar_x = mouse_x;
-				_entity_selected._tar_y = mouse_y;
-			}
-			
-	        _entity_selected._state = UNIT_STATE.MOVE;
+        // Clear defend point
+        _entity_selected._loc_defend_obj = noone;
+        _entity_selected._loc_defend_x = undefined;
+        _entity_selected._loc_defend_y = undefined;
 
-	        show_debug_message("[PLAYER] Move command issued to (" + string(_entity_selected._tar_x) + "," + string(_entity_selected._tar_y));
-	    }
-	}
+        // Do NOT reset lane path; keep PUSH lane if it exists
+
+        // Set stance to MANUAL
+        _entity_selected._stance = UNIT_STANCE.MANUAL;
+
+        // Set target position if not on wall
+        if (tilemap_get_at_pixel(global._wall_map, mouse_x, mouse_y) == 0) {
+            _entity_selected._tar_x = mouse_x;
+            _entity_selected._tar_y = mouse_y;
+        }
+
+        // Set state to MOVE
+        _entity_selected._state = UNIT_STATE.MOVE;
+
+        show_debug_message("[PLAYER] " + string(_entity_selected) + " forced to MANUAL stance and moving to (" +
+                           string(_entity_selected._tar_x) + "," + string(_entity_selected._tar_y) + ")");
+    }
 }
 #endregion
+
+
+
+#region UNIT STANCE SWITCHING
+if (_entity_selected != undefined && _entity_selected._type == "UNIT" && _entity_selected._unit_name != "FODDER") {
+
+    // 1 = Manual
+    if (keyboard_check_pressed(ord("1"))) {
+        _entity_selected._stance = UNIT_STANCE.MANUAL;
+        show_debug_message("[PLAYER] " + string(_entity_selected) + " set to MANUAL stance");
+    }
+
+    // 2 = Push
+    if (keyboard_check_pressed(ord("2"))) {
+        _entity_selected._stance = UNIT_STANCE.PUSH;
+        show_debug_message("[PLAYER] " + string(_entity_selected) + " set to PUSH stance");
+    }
+
+    // 3 = Defend
+    if (keyboard_check_pressed(ord("3"))) {
+        var _hovered_building = instance_position(mouse_x, mouse_y, obj_building);
+
+        // If hovering a building
+        if (_hovered_building != noone) {
+            _entity_selected._loc_defend_obj = _hovered_building;
+            _entity_selected._loc_defend_x   = _hovered_building.x;
+            _entity_selected._loc_defend_y   = _hovered_building.y;
+        } 
+        // Otherwise use the mouse position as the defend point (if not a wall)
+        else if (tilemap_get_at_pixel(global._wall_map, mouse_x, mouse_y) == 0) {
+            _entity_selected._loc_defend_obj = noone;
+            _entity_selected._loc_defend_x   = mouse_x;
+            _entity_selected._loc_defend_y   = mouse_y;
+        }
+        else {
+            // If it's a wall tile, fallback to manual
+            _entity_selected._stance = UNIT_STANCE.MANUAL;
+            show_debug_message("[PLAYER] Invalid defend location (wall tile), reverting to MANUAL stance");
+            exit;
+        }
+
+        _entity_selected._stance = UNIT_STANCE.DEFEND;
+        show_debug_message("[PLAYER] " + string(_entity_selected) + " set to DEFEND stance at (" + string(_entity_selected._loc_defend_x) + "," + string(_entity_selected._loc_defend_y) + ")");
+    }
+}
+#endregion
+
 
 
 // CAMERA MOVE

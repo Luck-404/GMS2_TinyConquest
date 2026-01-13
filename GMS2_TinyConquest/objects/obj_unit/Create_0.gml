@@ -26,6 +26,14 @@ enum UNIT_STATE {
 }
 _state = UNIT_STATE.IDLE;
 
+//STANCE
+enum UNIT_STANCE {
+    MANUAL,
+    DEFEND,
+    PUSH
+}
+_stance = UNIT_STANCE.MANUAL;
+
 // TEAM
 _team = TEAM.PLAYER;
 
@@ -46,3 +54,7 @@ _tar_y = y;
 
 // SPawner reference (set when spawned)
 _spawner = undefined;
+
+_loc_defend_x = x;
+_loc_defend_y = y;
+_loc_defend_obj = undefined;

@@ -79,18 +79,24 @@ if (_selected) {
                 string(round(_tar_y)) + ")";
         }
     }
+	
+	var stance_txt;
+	switch (_stance) {
+	    case UNIT_STANCE.MANUAL: stance_txt = "MANUAL"; break;
+	    case UNIT_STANCE.DEFEND: stance_txt = "DEFEND"; break;
+	    case UNIT_STANCE.PUSH:   stance_txt = "PUSH"; break;
+	}
 
-    // ----------------------------
-    // BUILD STRING
-    // ----------------------------
-    var _str =
-        "TYPE: UNIT\n" +
-        "HP: " + hp_txt + "\n" +
-        "SPEED: " + spd_txt + "\n" +
-        "STATE: " + state_txt + "\n" +
-        "TARGET: " + target_txt + "\n" +
-        "POS: (" + string(round(x)) + "," + string(round(y)) + ")";
-
+// Then include it in your drawn text
+var _str =
+    "TYPE: UNIT\n" +
+    "HP: " + hp_txt + "\n" +
+    "SPEED: " + spd_txt + "\n" +
+    "STATE: " + state_txt + "\n" +
+    "STANCE: " + stance_txt + "\n" +
+    "TARGET: " + target_txt + "\n" +
+    "POS: (" + string(round(x)) + "," + string(round(y)) + ")";
+	
     // ----------------------------
     // DRAW TEXT
     // ----------------------------

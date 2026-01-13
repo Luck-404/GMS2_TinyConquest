@@ -1,6 +1,6 @@
 /// scr_debug_draw_ground_tiles()
 /// Draws yellow circles at every ground tile in ly_ground
-
+if (global._flag_overlays == true){
 // Get tilemap ID
 var tilemap_id = layer_tilemap_get_id("ly_ground");
 if (tilemap_id == -1) return; // Layer not found
@@ -34,3 +34,4 @@ for (var tx = 0; tx < grid_width; tx++)
 
 // Reset color
 draw_set_color(c_white);
+}
