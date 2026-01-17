@@ -37,6 +37,8 @@
     {"name":"tile_test_wall","order":2,"path":"sprites/tile_test_wall/tile_test_wall.yy",},
     {"name":"obj_building_flag","order":1,"path":"objects/obj_building_flag/obj_building_flag.yy",},
     {"name":"scr_tile_wall_penalty_cache","order":2,"path":"scripts/scr_tile_wall_penalty_cache/scr_tile_wall_penalty_cache.yy",},
+    {"name":"spr_unit_general_bunny","order":3,"path":"sprites/spr_unit_general_bunny/spr_unit_general_bunny.yy",},
+    {"name":"obj_unit_general_fodder","order":4,"path":"objects/obj_unit_general_fodder/obj_unit_general_fodder.yy",},
     {"name":"spr_zap","order":2,"path":"sprites/spr_zap/spr_zap.yy",},
     {"name":"rm_testing","order":2,"path":"rooms/rm_testing/rm_testing.yy",},
     {"name":"spr_fodder_spawner","order":4,"path":"sprites/spr_fodder_spawner/spr_fodder_spawner.yy",},
