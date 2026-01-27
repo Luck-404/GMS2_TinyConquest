@@ -65,7 +65,7 @@ if (keyboard_check_pressed(ord("O"))){
 			_tary = mouse_y;		
 		}
 
-		instance_create_layer(_tarx,_tary,"ly_fx",obj_fx_explosion);
+		instance_create_layer(_tarx,_tary,"ly_fx",obj_fx_dev_explosion);
 	}	
 	#endregion
 	
@@ -239,7 +239,7 @@ if (keyboard_check_pressed(ord("O"))){
 		if (tilemap_get_at_pixel(global._wall_map,mouse_x,mouse_y) == 0){
 
 			//if unit is selected, grab the path from the unit
-			if (obj_player_controller._entity_selected != undefined){
+			if (obj_player_controller._entity_selected != undefined && obj_player_controller._entity_selected._type == "UNIT"){
 				var _tarx = obj_player_controller._entity_selected.x;
 				var _tary = obj_player_controller._entity_selected.x;	
 				for (var _i = 0; _i<5; _i++){
@@ -253,10 +253,10 @@ if (keyboard_check_pressed(ord("O"))){
 						_unit._team = TEAM.ENEMY;							
 					}
 					_unit._lane_path = obj_player_controller._entity_selected._lane_path;
-					_unit._spawner = obj_player_controller._entity_selected._spawner;
+					_unit._spawner = obj_player_controller._entity_selected._spawner;			
+					_unit._path_index = obj_player_controller._entity_selected._path_index;
 					_unit._state = UNIT_STATE.MOVE;
 					_unit._stance = UNIT_STANCE.PUSH;
-					scr_rejoin_lane(_unit);
 				}				
 			}
 			
@@ -289,23 +289,96 @@ if (keyboard_check_pressed(ord("O"))){
 					_unit._spawner = _spawner;
 					_unit._state = UNIT_STATE.MOVE;
 					_unit._stance = UNIT_STANCE.PUSH;
-					scr_rejoin_lane(_unit);				
+					
+					//join the lane at the nearest pos/index of the path (dont go all the way back to the beginning
+					_unit._path_index = scr_get_closest_lane_pos(_unit);		
 				}
 			}
 		}
 	}		
+	#endregion
 	
 	//SPAWN 1 FODDER
 	#region SPAWN 1 FODDER F8
 	if (keyboard_check_pressed(vk_f8)){	
-		
+		if (tilemap_get_at_pixel(global._wall_map,mouse_x,mouse_y) == 0){
+
+			//if unit is selected, grab the path from the unit
+			if (obj_player_controller._entity_selected != undefined && obj_player_controller._entity_selected._type == "UNIT"){
+				var _tarx = obj_player_controller._entity_selected.x;
+				var _tary = obj_player_controller._entity_selected.x;	
+				for (var _i = 0; _i<1; _i++){
+					var _xrand = irandom_range(-100,100);
+					var _yrand = irandom_range(-100,100);
+					var _unit = instance_create_layer(_tarx+_xrand,_tary+_yrand,"ly_units",obj_unit_general_fodder);
+					//based on the team, give them that distinction
+					if (global._dev_team_selected == "PLAYER"){
+						_unit._team = TEAM.PLAYER;
+					} else {
+						_unit._team = TEAM.ENEMY;							
+					}
+					_unit._lane_path = obj_player_controller._entity_selected._lane_path;
+					_unit._spawner = obj_player_controller._entity_selected._spawner;			
+					_unit._path_index = obj_player_controller._entity_selected._path_index;
+					_unit._state = UNIT_STATE.MOVE;
+					_unit._stance = UNIT_STANCE.PUSH;
+				}				
+			}
+			
+			//if there is not a unit selected- use mouse
+			else {
+				//spawn 1
+				for (var _i = 0; _i<1; _i++){
+					var _xrand = irandom_range(-100,100);
+					var _yrand = irandom_range(-100,100);
+					var _unit = instance_create_layer(mouse_x+_xrand,mouse_y+_yrand,"ly_units",obj_unit_general_fodder);
+					var _spawner = undefined;
+					
+					//based on the team, give them that distinction
+					if (global._dev_team_selected == "PLAYER"){
+						_unit._team = TEAM.PLAYER;	
+						if (mouse_y > room_height/2){
+							_spawner = instance_furthest(mouse_x,mouse_y,obj_building_fodder_spawner);
+						} else {
+							_spawner = instance_nearest(mouse_x,mouse_y,obj_building_fodder_spawner);
+						}
+					} else {
+						_unit._team = TEAM.ENEMY;	
+						if (mouse_y < room_height/2){
+							_spawner = instance_furthest(mouse_x,mouse_y,obj_building_fodder_spawner);
+						} else {
+							_spawner = instance_nearest(mouse_x,mouse_y,obj_building_fodder_spawner);
+						}						
+					}
+					_unit._lane_path = _spawner._lane;	
+					_unit._spawner = _spawner;
+					_unit._state = UNIT_STATE.MOVE;
+					_unit._stance = UNIT_STANCE.PUSH;
+					
+					//join the lane at the nearest pos/index of the path (dont go all the way back to the beginning
+					_unit._path_index = scr_get_closest_lane_pos(_unit);		
+				}
+			}
+		}
 	}
+	#endregion
 	
 	//TRIGGER A LARGE KNOCKBACK AT CURSOR
 	#region TRIGGER LARGE KNOCKBACK F9
 	if (keyboard_check_pressed(vk_f9)){	
-		
-	}			
-#endregion
+		var _tarx;
+		var _tary;
+		if (obj_player_controller._entity_selected != undefined){
+			_tarx = obj_player_controller._entity_selected.x;
+			_tary = obj_player_controller._entity_selected.y;
+		}
+		else {
+			_tarx = mouse_x;
+			_tary = mouse_y;		
+		}
+
+		instance_create_layer(_tarx,_tary,"ly_fx",obj_fx_dev_knockback);
+	}		
+	#endregion
 
 #endregion

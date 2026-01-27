@@ -58,3 +58,12 @@ _spawner = undefined;
 _loc_defend_x = x;
 _loc_defend_y = y;
 _loc_defend_obj = undefined;
+
+// KNOCKBACK
+_flag_knockback     = false;
+_knockback_timer    = 0;
+_knockback_dir      = 0;
+_knockback_force    = 0;
+_saved_state        = UNIT_STATE.IDLE;
+_saved_stance       = UNIT_STANCE.MANUAL;
+

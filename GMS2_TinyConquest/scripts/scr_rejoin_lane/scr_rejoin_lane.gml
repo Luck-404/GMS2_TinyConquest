@@ -32,4 +32,5 @@ function scr_rejoin_lane(u)
 
     u._lane_path = best_lane;
     u._lane_pos  = best_pos;
+	u._path_index = scr_get_closest_lane_pos(u);
 }

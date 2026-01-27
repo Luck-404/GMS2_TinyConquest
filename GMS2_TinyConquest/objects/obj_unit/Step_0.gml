@@ -34,6 +34,35 @@ if (place_meeting(x, y, obj_unit)) {
 }
 
 // --------------------------
+// KNOCKBACK OVERRIDE
+// --------------------------
+if (_flag_knockback)
+{
+    x += lengthdir_x(_knockback_force, _knockback_dir);
+    y += lengthdir_y(_knockback_force, _knockback_dir);
+
+    _knockback_force *= 0.85; // damping feels good
+
+    _knockback_timer--;
+
+    if (_knockback_timer <= 0)
+    {
+        _flag_knockback = false;
+
+        // Restore state
+        _state  = _saved_state;
+        _stance = _saved_stance;
+
+        // Rejoin lane cleanly
+        if (_lane_path != undefined && path_exists(_lane_path))
+        {
+            _path_index = scr_get_closest_lane_pos(id);
+        }
+    }
+
+    exit;
+} else {
+// --------------------------
 // ENEMY SEARCH (IDLE or MOVE) - modified for DEFEND
 // --------------------------
 var search_radius = 3 * global._tile_size;
@@ -258,5 +287,6 @@ switch(_state) {
         else instance_destroy();
         break;
     #endregion
+}
 }
 }
