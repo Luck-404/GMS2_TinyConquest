@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_regenerate_lane_path",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_regenerate_lane_path",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
