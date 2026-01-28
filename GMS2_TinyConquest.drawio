@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.4">
   <diagram name="Page-1" id="GXg639s8IWxQ7A-2pwNW">
-    <mxGraphModel dx="3980" dy="5685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#323232)" math="0" shadow="0">
+    <mxGraphModel dx="3244" dy="3138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#323232)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -640,9 +640,6 @@
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-39" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#76608a;fontColor=#ffffff;strokeColor=#432D57;" value="buff spawner" vertex="1">
           <mxGeometry height="80" width="120" x="3260" y="-800" as="geometry" />
         </mxCell>
-        <mxCell id="ueWMUFC6fdHfbWzJ3TqN-40" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="GUI and info popups" vertex="1">
-          <mxGeometry height="80" width="80" x="330" y="-900" as="geometry" />
-        </mxCell>
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-41" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="World Map" vertex="1">
           <mxGeometry height="80" width="80" x="640" y="-904" as="geometry" />
         </mxCell>
@@ -658,17 +655,11 @@
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-45" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="runes" vertex="1">
           <mxGeometry height="80" width="80" x="2891" y="-150" as="geometry" />
         </mxCell>
-        <mxCell id="ueWMUFC6fdHfbWzJ3TqN-47" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=light-dark(#FFFFFF,#890000);" value="leylines" vertex="1">
-          <mxGeometry height="80" width="80" x="760" y="-904" as="geometry" />
-        </mxCell>
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-51" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="status effects" vertex="1">
           <mxGeometry height="80" width="80" x="2520" y="-410" as="geometry" />
         </mxCell>
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-52" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="damage types" vertex="1">
           <mxGeometry height="80" width="80" x="2400" y="-410" as="geometry" />
-        </mxCell>
-        <mxCell id="ueWMUFC6fdHfbWzJ3TqN-54" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="items (stat changers, runes)" vertex="1">
-          <mxGeometry height="80" width="80" x="1020" y="-454" as="geometry" />
         </mxCell>
         <mxCell id="ueWMUFC6fdHfbWzJ3TqN-55" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="factions" vertex="1">
           <mxGeometry height="80" width="80" x="1130" y="730" as="geometry" />
@@ -799,9 +790,6 @@
         <mxCell id="rcxp9p4CxcQyANjceguz-18" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="COMBAT" vertex="1">
           <mxGeometry height="80" width="80" x="-1479" y="-440" as="geometry" />
         </mxCell>
-        <mxCell id="rcxp9p4CxcQyANjceguz-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=light-dark(#FFFFFF,#890000);" value="unlocks / shop" vertex="1">
-          <mxGeometry height="80" width="80" x="-930" y="-620" as="geometry" />
-        </mxCell>
         <mxCell id="rcxp9p4CxcQyANjceguz-22" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Shaders" vertex="1">
           <mxGeometry height="80" width="80" x="1160" y="500" as="geometry" />
         </mxCell>
@@ -837,6 +825,9 @@
             <mxPoint x="-1350" y="-1086" as="sourcePoint" />
             <mxPoint x="-1350" y="670" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="EbhoLxJr6qR0gPpaQiiK-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="GUI / UI &amp;amp; CMD Output" vertex="1">
+          <mxGeometry height="80" width="80" x="370" y="-780" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
