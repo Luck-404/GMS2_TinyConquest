@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" version="29.3.6">
   <diagram name="Page-1" id="GXg639s8IWxQ7A-2pwNW">
-    <mxGraphModel dx="3244" dy="3138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#323232)" math="0" shadow="0">
+    <mxGraphModel dx="2542" dy="2123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#323232)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -828,6 +828,74 @@
         </mxCell>
         <mxCell id="EbhoLxJr6qR0gPpaQiiK-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="GUI / UI &amp;amp; CMD Output" vertex="1">
           <mxGeometry height="80" width="80" x="370" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="obj_gui_title" vertex="1">
+          <mxGeometry height="80" width="80" x="-1260" y="-980" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Background" vertex="1">
+          <mxGeometry height="80" width="80" x="-1260" y="-853" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="obj_gui_btn_start" vertex="1">
+          <mxGeometry height="80" width="80" x="-1180" y="-637.25" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="obj_gui_btn_settings" vertex="1">
+          <mxGeometry height="80" width="80" x="-1250" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="obj_gui_btn_exit" vertex="1">
+          <mxGeometry height="80" width="80" x="-1250" y="-374" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-9" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-4" style="endArrow=none;html=1;rounded=0;strokeWidth=1;shape=link;" target="sh7eE981HTtgqYizkNaZ-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-1140" y="-810" as="sourcePoint" />
+            <mxPoint x="-1080" y="-845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-10" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" target="sh7eE981HTtgqYizkNaZ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-11" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-3" style="endArrow=none;html=1;rounded=0;strokeWidth=1;shape=link;" target="sh7eE981HTtgqYizkNaZ-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-1090" y="-910" as="sourcePoint" />
+            <mxPoint x="-1080" y="-940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;Simple sprite&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Fun click effects- sometimes changes sprite to another faction&#39;s theme&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Randomly spawns game units that wander, these can be clicked and killed&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="340" x="-1130" y="-990" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;mostly minimalist infinite parallax scroller&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="43" width="180" x="-1130" y="-834.5" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-14" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-5" style="endArrow=none;html=1;rounded=0;strokeWidth=1;shape=link;" target="sh7eE981HTtgqYizkNaZ-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-1155" y="-597.5" as="sourcePoint" />
+            <mxPoint x="-1055" y="-629.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;&lt;div&gt;Simple spr/obj - spawns a gui obj that hosts the setup&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42.5" width="180" x="-1230" y="-715" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-16" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-5" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" target="sh7eE981HTtgqYizkNaZ-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-1150" y="-660" as="sourcePoint" />
+            <mxPoint x="-970" y="-597" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-17" connectable="0" parent="sh7eE981HTtgqYizkNaZ-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" value="left click" vertex="1">
+          <mxGeometry relative="1" x="-0.2534" y="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-19" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="obj_gui_setup" vertex="1">
+          <mxGeometry height="80" width="80" x="-940" y="-632" as="geometry" />
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-20" edge="1" parent="1" source="sh7eE981HTtgqYizkNaZ-19" style="endArrow=none;html=1;rounded=0;strokeWidth=1;shape=link;" target="sh7eE981HTtgqYizkNaZ-21" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-860" y="-654.75" as="sourcePoint" />
+            <mxPoint x="-775" y="-647.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh7eE981HTtgqYizkNaZ-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;Gui obj popup&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="42.5" width="180" x="-990" y="-726.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
